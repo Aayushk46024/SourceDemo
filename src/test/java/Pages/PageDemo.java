@@ -25,18 +25,21 @@ public class PageDemo {
         }
         return loginPage;
     }
+
     public HomePage getHomePage() {
         if (homePage == null) {
             homePage = new HomePage(driver);
         }
         return homePage;
     }
+
     public CheckOutPage getCheckOutPage() {
         if (checkOutPage == null) {
             checkOutPage = new CheckOutPage(driver);
         }
         return checkOutPage;
     }
+
     public AboutPage getAboutPage() {
         if (aboutPage == null) {
             aboutPage = new AboutPage(driver);

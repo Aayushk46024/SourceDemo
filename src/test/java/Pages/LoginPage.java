@@ -1,18 +1,19 @@
 package Pages;
 
-import Testbase.TestBase;
+
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
 
-public class LoginPage extends TestBase {
+public class LoginPage extends Testbase.TestBase implements Interfaces.LoginPage{
 
     @FindBy(id = "user-name")
     WebElement uname;
@@ -36,5 +37,10 @@ public class LoginPage extends TestBase {
         uname.sendKeys(username);
         pass.sendKeys(password);
         loginBtn.click();
+    }
+
+    public void verifySuccessfulLogin()
+    {
+        Assert.assertEquals(driver.getCurrentUrl(), "");
     }
 }

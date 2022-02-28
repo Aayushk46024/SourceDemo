@@ -1,15 +1,12 @@
 package Pages;
 
-import Testbase.TestBase;
-import org.checkerframework.checker.units.qual.A;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class HomePage extends TestBase {
+public class HomePage extends Testbase.TestBase implements Interfaces.HomePage {
 
     @FindBy(partialLinkText = "Sauce Labs Backpack")
     WebElement Product1;
@@ -52,7 +49,7 @@ public class HomePage extends TestBase {
         Product1.click();
         AddToCart1.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product1"), "Sauce Labs Backpack");
+        Assert.assertEquals(prop.getProperty("product1"), Product1.getText());
         implicitWait();
         backToShopping.click();
     }
@@ -62,7 +59,7 @@ public class HomePage extends TestBase {
         Product2.click();
         AddToCart2.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product2"), "Sauce Labs Bike Light");
+        Assert.assertEquals(prop.getProperty("product2"), Product2.getText());
         implicitWait();
         backToShopping.click();
     }
@@ -72,7 +69,7 @@ public class HomePage extends TestBase {
         Product3.click();
         AddToCart3.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product3"), "Sauce Labs Bolt T-Shirt");
+        Assert.assertEquals(prop.getProperty("product3"), Product3.getText());
         implicitWait();
         backToShopping.click();
     }
@@ -82,7 +79,7 @@ public class HomePage extends TestBase {
         Product4.click();
         AddToCart4.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product4"), "Sauce Labs Fleece Jacket");
+        Assert.assertEquals(prop.getProperty("product4"), Product4.getText());
         implicitWait();
         backToShopping.click();
     }
@@ -92,7 +89,7 @@ public class HomePage extends TestBase {
         Product5.click();
         AddToCart5.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product5"), "Sauce Labs Onesie");
+        Assert.assertEquals(prop.getProperty("product5"), Product5.getText());
         implicitWait();
         backToShopping.click();
     }
@@ -102,7 +99,7 @@ public class HomePage extends TestBase {
         Product6.click();
         AddToCart6.click();
         ShoppingCart.click();
-        Assert.assertEquals(prop.getProperty("product6"), "Test.allTheThings() T-Shirt (Red)");
+        Assert.assertEquals(prop.getProperty("product6"), Product6.getText());
         implicitWait();
         backToShopping.click();
     }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LogoutPage extends TestBase {
+public class LogoutPage implements Interfaces.LogoutPage {
 
     @FindBy(id = "react-burger-menu-btn")
     WebElement HomeButton;

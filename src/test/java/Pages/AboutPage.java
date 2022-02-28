@@ -1,12 +1,11 @@
 package Pages;
 
-import Testbase.TestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AboutPage extends TestBase {
+public class AboutPage extends Testbase.TestBase implements Interfaces.AboutPage {
 
     @FindBy(id = "react-burger-menu-btn")
     WebElement HomeButton;
